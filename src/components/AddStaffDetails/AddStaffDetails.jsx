@@ -16,22 +16,16 @@ function StaffDetails() {
                 <div className="blank" />
                 <h1>Staff Details</h1>
             </div>
-            <div id="searchStaffRow">
+            <div >
                 <input type="text" className="searchStaff" placeholder="&#x1F50D; Search Staff" />
                 <button className="addStaffBtn" onClick={toggleAddFaculty}>New Staff +</button>
             </div>
 
             <div className={`addFaculty ${showAddFaculty ? 'open' : ''}`}>
-                <div className="facultyImageAdd">
-                    <input type="file" id="fileInput" className="input-hidden" />
-                    <label htmlFor="fileInput">
-                    <span>Image ⬆️</span>
-                    </label>
-                </div>
+                <input type="file" accept=".png, .jpg, .jpeg" className="facultyImageAdd" />
                 <input type="text" className="facultyNameAdd" placeholder="Enter faculty name" />
                 <input type="text" className="facultyEducationAdd" placeholder="Enter faculty education / caption" />
                 <input type="text" className="facultySocialAdd" placeholder="social link" />
-                <button className="saveAddBtn" onClick={toggleAddFaculty}>Save</button>
                 <button className="cancelAddBtn" onClick={toggleAddFaculty}>Cancel</button>
             </div>
 
@@ -42,7 +36,7 @@ function StaffDetails() {
                             <th></th>
                             <th>Faculty Name</th>
                             <th>Education</th>
-                            <th>LinkedIn</th>
+                            <th>LinkedIn / Social Link</th>
                             <th></th>
                             <th></th>
                         </tr>

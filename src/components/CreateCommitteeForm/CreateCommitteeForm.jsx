@@ -5,7 +5,7 @@ function CreateCommitteeForm() {
   return (
     <div className="container">
       <form className="committeeForm">
-        <div className="rowMain1">
+        <div className="rowMain">
           <div id="row1">
             <label id="comLab">Name of the committee</label>
             <br />
