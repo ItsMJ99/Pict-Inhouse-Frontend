@@ -17,7 +17,7 @@
     background-color:#F2F2F2;
 }
 
-.rowMain{
+.rowMain,.rowMain1{
     display: flex;
     margin-left: 2rem;
     margin-top: 2rem;
@@ -91,7 +91,6 @@
 #row5 select{
   width: 85%;
 }
-
 
 #row6 button{
   margin-top:1rem;
@@ -230,7 +229,7 @@
       width:100%;
     }
 
-    .rowMain {
+    .rowMain,.rowMain1 {
       flex-direction: column; 
     }
 

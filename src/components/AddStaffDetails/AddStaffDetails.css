@@ -1,113 +1,153 @@
-.title{
-    margin-top:1.5rem;
+.title {
+    margin-top: 1.5rem;
     display: flex;
-    margin-bottom:1.5rem;
+    margin-bottom: 1.5rem;
 }
 
-.blank{
-    margin-top:1.5rem;
+.blank {
+    margin-top: 1.5rem;
     background-color: #1e90ff;
     border-radius: 5px;
-    width:0.3rem;
-    height:2rem;
-    margin-left:6rem;
+    width: 0.3rem;
+    height: 2rem;
 }
 
-h1{
-    font-family:sans-serif;
+.title h1 {
+    font-family: sans-serif;
     margin-left: 1rem;
-    color: rgba(0,0,0,0.6);
+    color: rgba(0, 0, 0, 0.6);
 }
 
-.searchStaff,.facultyNameAdd,.facultyEducationAdd,.facultySocialAdd,.facultyImageAdd {
-    height: 3rem;
-    font-size: 18px;
-    border-color: rgba(0,0,0,0.2);
-    border-radius: 8px;
+#searchStaffRow {
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
 }
 
-.searchStaff{
-    margin-left: 6rem;
-    width: 74%;
+.searchStaff {
+    flex: 1; 
+    width: calc(100% - 150px);
 }
 
-.addStaffBtn,.cancelAddBtn {
+.addStaffBtn {
+    margin-left: 0.5rem; 
+}
+
+.addStaffBtn,
+.cancelAddBtn,
+.saveAddBtn {
     color: white;
     font-size: 16px;
-    border: none; 
-    border-radius: 5px;
-    padding: 1rem 4rem;
-    margin-left: 2rem;
+    border: none;
+    border-radius: 12px;
+    padding: 1rem 4%;
+    background-color: #1e90ff;
 }
 
-.facultyNameAdd{
-    width: 28rem;
+.cancelAddBtn { 
+    background-color: #ff8686;
+    margin-left: 1%;
 }
 
-.facultyEducationAdd{
-    width: 22rem;
+.saveAddBtn{
+    margin-left: 1%;
+    background-color: #53c924;
 }
 
-.facultySocialAdd{
-    width: 15rem;
+.saveAddBtn:hover{
+    background-color: #3d8f1d;
 }
 
-#imageUploadInput{
+.facultyImageAdd {
+    width: 9%;
+}
+
+
+
+.facultyImageAdd label {
+    display: flex;
+    background-color: white;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+  
+}
+  
+.facultyImageAdd label:hover {
+    background-color: rgba(22, 22, 22, 0.1);
+    border-color: rgba(0, 0, 0, 0.3);
+}
+
+.input-hidden {
+    display: none;
+}
+
+.facultyNameAdd {
+    width: 28%;
+}
+
+.facultyEducationAdd {
+    width: 22%;
+}
+
+.facultySocialAdd {
+    width: 15%;
+}
+
+#imageUploadInput {
     width: 10px;
 }
 
-.facultyNameAdd,.facultyEducationAdd,.facultySocialAdd{
+.facultyNameAdd,
+.facultyEducationAdd,
+.facultySocialAdd {
     text-align: center;
-    margin-left: 1rem;
+    margin-left: 1%;
 }
-
-.facultyImageAdd{
-    margin-left:3rem;
-    width: 8rem;
-    height: 3rem;
-    color: transparent;
-}
-
-.addStaffBtn{
-    background-color: #1e90ff;
-}
-
-.cancelAddBtn{
-    background-color: #ff8686;
-  }
 
 .addStaffBtn:hover {
     background-color: #1973cc;
 }
 
-.addFaculty{
-    margin-top:1.5rem;
-    margin-bottom:1.5rem;
-    margin-left: 6rem;
+.addFaculty {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
-table{
-    margin-left:6rem;
-    width:89%;
+.searchStaff,
+.facultyNameAdd,
+.facultyEducationAdd,
+.facultySocialAdd{
+    height: 3rem;
+    font-size: 18px;
+    border-color: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
     box-shadow: 0px 2px 4px rgba(5, 0, 0, 0.1);
     border-collapse: collapse;
 }
 
-th{   
-    font-weight: 400; 
+th {
+    font-weight: 400;
     font-size: 1.3rem;
     height: 3rem;
     text-align: left;
-    
 }
 
-.columnHeading{
-    background-color:#f6f6f6;
+.columnHeading {
+    background-color: #f6f6f6;
     box-shadow: 0px 2px 4px rgba(5, 0, 0, 0.1);
 }
-  
+
 .cancelAddBtn:hover {
-  background-color: #d66262;
+    background-color: #d66262;
 }
 
 .addFaculty {
@@ -117,7 +157,7 @@ th{
 }
 
 .addFaculty.open {
-    max-height: 500px; 
+    max-height: 500px;
 }
 
 .noRecordMessage {
@@ -127,8 +167,23 @@ th{
     font-size: 1.5rem;
 }
 
+@media screen and (max-width: 768px) {
+    .addFaculty {
+        flex-wrap: wrap;
+    }
 
+    .addFaculty > * {
+        flex: 1 1 100%;
+        margin-bottom: 0.5rem; 
+    }
 
+    .addFaculty.open {
+        max-height: unset;
+    }
 
+    .columnHeading th{
+        font-size: 0.9rem;
+        text-align:center;
+    }
+}
 
-     

@@ -18,6 +18,7 @@ img {
 }
 
 .logoutBtn {
+    font-size: 16px;
     color: white;
     background-color: #1e90ff;
     border: none; 
@@ -30,11 +31,11 @@ img {
     background-color: #1973cc;
 }
 
-h2 {
+.content h2 {
     margin: 0;
 }
 
-p {
+.content p {
     color: blue;
     margin: 0;
 }
