@@ -34,7 +34,7 @@ function App() {
               <div>
                 <div className="header-container">
                   <AcademicYearSelection />
-                  <Searchbar placeholder={"\u00A0\u00A0\u00A0\u00A0 Search Committees"} name={"New +"}/>       
+                  <Searchbar placeholder={"\u00A0\u00A0 Search Committees"} name={"New +"}/>       
                 </div>
                   <div className='noCommittees'>
                     <h1 >No committies added for academic year 2023-2024</h1>
@@ -49,7 +49,7 @@ function App() {
               <>
                 <div className="header-container">
                 <AcademicYearSelection />
-                <Searchbar placeholder={"\u00A0\u00A0\u00A0\u00A0 Search Committees"} name={"New +"}/>
+                <Searchbar placeholder={"\u00A0\u00A0 Search Committees"} name={"New +"}/>
                 </div>
                 <div className="committee-container">
                 <CommitteeSelector />

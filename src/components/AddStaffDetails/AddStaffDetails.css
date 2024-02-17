@@ -13,7 +13,6 @@
 }
 
 .title h1 {
-    font-family: sans-serif;
     margin-left: 1rem;
     color: rgba(0, 0, 0, 0.6);
 }
@@ -25,6 +24,7 @@
 }
 
 .searchStaff {
+    padding-left: 1rem;
     flex: 1; 
     width: calc(100% - 150px);
 }

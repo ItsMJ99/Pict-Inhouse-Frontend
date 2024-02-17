@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import StaffInfoRow from "../MiniComponents/StaffInfoRow/StaffInfoRow.jsx";
 import StaffInfo from "../MiniComponents/StaffInfoRow/StaffInfo.js";
+import SearchIcon from '@mui/icons-material/Search';
 import "./AddStaffDetails.css";
 
 function StaffDetails() {
@@ -17,7 +18,7 @@ function StaffDetails() {
                 <h1>Staff Details</h1>
             </div>
             <div id="searchStaffRow">
-                <input type="text" className="searchStaff" placeholder="&#x1F50D; Search Staff" />
+                <input type="text" className="searchStaff" placeholder={<SearchIcon/> + "Search Staff"} />
                 <button className="addStaffBtn" onClick={toggleAddFaculty}>New Staff +</button>
             </div>
 

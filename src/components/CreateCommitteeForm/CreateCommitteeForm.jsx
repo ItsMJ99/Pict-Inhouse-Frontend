@@ -1,5 +1,6 @@
 import React from "react";
 import "./CreateCommitteeForm.css";
+import DeleteIcon from '@mui/icons-material/Delete';
 
 function CreateCommitteeForm() {
   return (
@@ -11,14 +12,14 @@ function CreateCommitteeForm() {
             <br />
             <input
               type="text"
-              placeholder={"\u00A0\u00A0\u00A0\u00A0 Committee name"}
+              placeholder={"\u00A0\u00A0 Committee name"}
             />
           </div>
           <div id="row2">
             <label id="catLab">Category</label>
             <input
               type="text"
-              placeholder={"\u00A0\u00A0\u00A0\u00A0 Academic Committee"}
+              placeholder={"\u00A0\u00A0 Academic Committee"}
             />
           </div>
         </div>
@@ -54,7 +55,7 @@ function CreateCommitteeForm() {
               <option>Marketing</option>
               <option>Finance</option>
             </select>
-            <button>&#x1F5D1;</button>
+            <button><DeleteIcon id="deleteIcon" sx={{ fontSize: 24 }}/></button>
           </div>
         </div>
 

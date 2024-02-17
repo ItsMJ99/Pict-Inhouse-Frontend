@@ -13,6 +13,10 @@
   }
 }
 
+*{
+  font-family: inter v;
+}
+
 .headText{
   margin-top: 2rem;
   margin-left: 4%;
@@ -40,7 +44,6 @@
   align-items: center;
   margin-top: 6rem;
   padding: 2rem;
-  /* background-color: red; */
 }
 
 .noCommittees h1{
@@ -49,7 +52,6 @@
   color: rgba(0, 0, 0, 0.8);
   font-size: 3rem;
   text-align: center;
-  /* background-color: green; */
 }
 
 .noCommittees h2{
@@ -59,7 +61,6 @@
   font-size: 2rem;
   font-weight: 500;
   color: rgba(0, 0, 0, 0.4);
-  /* background-color: blue; */
 }
 
 .noCommittees button {
@@ -80,6 +81,11 @@
 
 .App-link {
   color: #61dafb;
+}
+
+@font-face {
+  font-family:inter v;
+  src: url(../public/Inter/static/Inter-Medium.ttf);
 }
 
 @keyframes App-logo-spin {
