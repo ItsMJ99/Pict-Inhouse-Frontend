@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import { BrowserRouter as Router,Route,Routes } from "react-router-dom";
 import { Link } from "react-router-dom";
+import React, { useEffect } from 'react';
 import './App.css';
 import Header from "./components/Header/Header.jsx";
 import Navbar from "./components/Navbar/Navbar.js";
@@ -9,8 +10,8 @@ import CreateCommitteeForm from "./components/CreateCommitteeForm/CreateCommitte
 import Searchbar from "./components/MiniComponents/Searchbar/Searchbar.jsx";
 import AcademicYearSelection from "./components/MiniComponents/AcademicYearSelection/AcademicYearSelection.jsx";
 import CommitteeSelector from "./components/MiniComponents/CommitteeSelector/CommitteeSelector.jsx";
-import Home from "./Pages/Home";
-import Reports from "./Pages/Reports";
+import Home from "./components/Home/Home.jsx";
+import Reports from "./components/Reports/Reports.js";
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
           <Navbar />
           <Routes>
 
-            <Route path="/" Component={Home} />
+            <Route path="/home" Component={Home} />
 
             <Route path="/reports" Component={Reports} />
 
@@ -37,7 +38,7 @@ function App() {
               </>
             }/>
 
-            <Route path="/addnewacademicyear" element={
+            <Route path="/AddNewAcademicYear" element={
               <div>
                 <div className="header-container">
                   <AcademicYearSelection />

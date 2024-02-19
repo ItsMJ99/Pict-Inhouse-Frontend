@@ -1,5 +1,5 @@
 import React from "react";
-import "../../Pages/Home.css";
+import "../Home/Home.css";
 
 function Carts({ title, number, description }) {
   return (

@@ -13,7 +13,7 @@ export const SlidebarData = [
   },
   {
     title: "Academic Year",
-    path: "/academic",
+    path: "/AddNewAcademicYear",
     icon: <FaIcons.FaRegCalendarAlt />,
     cName: "nav-text",
   },

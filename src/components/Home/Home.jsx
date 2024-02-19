@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import * as FaIcons from "react-icons/fa";
 import "./Home.css";
-import Carts from "../components/Navbar/Carts";
+import Carts from "../Navbar/Carts";
 
 function Dashboard() {
   return (
     <>
+      {useEffect(()=>{
+          document.title = "Home"
+      })}
       <div className="main--content">
         <div className="header--wrapper">
           <div className="header--title">

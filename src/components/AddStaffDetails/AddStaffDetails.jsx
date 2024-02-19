@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import StaffInfoRow from "../MiniComponents/StaffInfoRow/StaffInfoRow.jsx";
 import StaffInfo from "../MiniComponents/StaffInfoRow/StaffInfo.js";
 import SearchIcon from '@mui/icons-material/Search';
