@@ -1,4 +1,8 @@
-td img {
+.staffRow{
+  background-color: white;
+}
+
+.col1 img {
   margin-top: 0.5rem;
   max-width: 100%;
   height: auto;
@@ -16,6 +20,12 @@ td img {
     text-wrap: nowrap;
     display: flex; 
     align-items: center; 
+}
+
+#LinkedInLogo{
+  color: blue;
+  width: 50px;
+  height: 50px;
 }
 
 .editIcon,
@@ -44,8 +54,8 @@ td img {
   background-color: #d66262;
 }
 
-td {
-  font-size: 1.3rem;
+.col1,.col2,.col3,.col4,.col5,.col6 {
+  font-size: 1.1rem;
   /* border: 1px solid black; */
 }
 

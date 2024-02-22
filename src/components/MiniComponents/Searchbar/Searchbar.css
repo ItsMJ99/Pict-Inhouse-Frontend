@@ -1,4 +1,4 @@
-#searchbar {
+#searchbar-btn {
     margin-left: 1.5%;
     height: 3rem;
     align-items: center;
@@ -6,17 +6,17 @@
     display: flex;
   }
   
-  #searchbar input {
+  #searchbar-btn input {
     padding-left: 1rem;
     flex: 1; 
-    height: 90%;
+    height: 100%;
     font-size: 18px;
     border: 2px solid;
     border-color: rgba(0, 0, 0, 0.3);
     border-radius: 8px;
   }
   
-  #searchbar button {
+  #searchbar-btn button {
     height: 100%;
     color: white;
     font-size: 18px;
@@ -28,17 +28,17 @@
     padding: 0.8rem 1.5rem;
   }
   
-  #searchbar button:hover {
+  #searchbar-btn button:hover {
     background-color: #1973cc;
   }
 
   @media screen and (max-width: 768px) {
-    #searchbar button{
+    #searchbar-btn button{
       text-wrap: nowrap;
       padding: 0.6rem 1.2rem;
     }
 
-    #searchbar{
+    #searchbar-btn{
       margin-left: 0;
     }
   }

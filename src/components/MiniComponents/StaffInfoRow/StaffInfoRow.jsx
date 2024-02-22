@@ -14,8 +14,7 @@ function StaffInfoRow(props) {
       <td className="col3">{props.education}</td>
       <td className="col4">
         <a href={props.social}>
-          <LinkedInIcon />
-          LinkedIn Profile
+          <LinkedInIcon id="LinkedInLogo"/>
         </a>
       </td>
       <td className="col5">

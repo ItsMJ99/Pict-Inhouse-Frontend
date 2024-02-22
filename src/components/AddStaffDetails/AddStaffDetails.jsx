@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import StaffInfoRow from "../MiniComponents/StaffInfoRow/StaffInfoRow.jsx";
 import StaffInfo from "../MiniComponents/StaffInfoRow/StaffInfo.js";
 import SearchIcon from '@mui/icons-material/Search';
+import UploadIcon from '@mui/icons-material/Upload';
 import "./AddStaffDetails.css";
 
 function StaffDetails() {
@@ -13,8 +14,8 @@ function StaffDetails() {
 
     return (
         <div className="container">
-            <div className="title">
-                <div className="blank" />
+            <div className="staff-title">
+                <div className="blank-bar" />
                 <h1>Staff Details</h1>
             </div>
             <div id="searchStaffRow">
@@ -24,9 +25,11 @@ function StaffDetails() {
 
             <div className={`addFaculty ${showAddFaculty ? 'open' : ''}`}>
                 <div className="facultyImageAdd">
-                    <input type="file" id="fileInput" className="input-hidden" />
+                    <input type="file" id="fileInput" className="input-hidden" accept=".png, .jpg, .jpeg"/>
                     <label htmlFor="fileInput">
-                    <span>Image ⬆️</span>
+                    <span className="uploadIconContainer">            
+                        Image<UploadIcon id="uploadImgIcon" sx={{ fontSize: 20 }} />
+                    </span>
                     </label>
                 </div>
                 <input type="text" className="facultyNameAdd" placeholder="Enter faculty name" />
@@ -37,7 +40,7 @@ function StaffDetails() {
             </div>
 
             {StaffInfo.length > 0 ? (
-                <table>
+                <table id="staffTable">
                     <thead>
                         <tr className="columnHeading">
                             <th></th>
