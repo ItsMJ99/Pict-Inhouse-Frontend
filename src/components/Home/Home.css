@@ -181,42 +181,42 @@
   width: 100%;
 }
 
-table {
+.table--container table {
   width: 100%;
   border-collapse: collapse;
 }
 
-thead {
+.table--container thead {
   background-color: rgba(113, 99, 186, 255);
   color: #fff;
 }
 
-th {
+.table--container th {
   padding: 15px;
   text-align: left;
 }
 
-tbody {
+.table--container tbody {
   background: #f2f2f2;
 }
 
-td {
+.table--container td {
   padding: 15px;
   font-size: 14px;
   color: #333;
 }
 
-tr:nth-child(even) {
+.table--container tr:nth-child(even) {
   background: #fff;
 }
 
-tfoot {
+.table--container tfoot {
   background: rgba(113, 99, 186, 255);
   font-weight: bold;
   color: #fff;
 }
 
-tfoot td {
+.table--container tfoot td {
   padding: 15px;
 }
 
