@@ -19,7 +19,10 @@ function StaffDetails() {
                 <h1>Staff Details</h1>
             </div>
             <div id="searchStaffRow">
-                <input type="text" className="searchStaff" placeholder={<SearchIcon/> + "Search Staff"} />
+                <div className="searchStaff">
+                    <input type="text" placeholder="Search Staff" />
+                    <SearchIcon className="searchIcon" />
+                </div>
                 <button className="addStaffBtn" onClick={toggleAddFaculty}>New Staff +</button>
             </div>
 

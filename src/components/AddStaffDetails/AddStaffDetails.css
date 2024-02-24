@@ -39,6 +39,7 @@
     border-radius: 12px;
     padding: 1rem 4%;
     background-color: #1e90ff;
+    height: 3rem;
 }
 
 .cancelAddBtn { 
@@ -66,7 +67,7 @@
     padding: 0.8rem 1.5rem;
     border-radius: 8px;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 16px;
   
 }
   
@@ -98,10 +99,6 @@
 
 .facultySocialAdd {
     width: 15%;
-}
-
-#imageUploadInput {
-    width: 10px;
 }
 
 .facultyNameAdd,
@@ -136,7 +133,25 @@
     padding-left: 1rem;
     flex: 1; 
     width: calc(100% - 150px); 
+    display: flex;
+    align-items: center;
+    position: relative;
 }
+
+.searchStaff input[type="text"] {
+    padding-left: 2rem; 
+}
+
+.searchStaff input{
+    font-size: 18px;
+}
+
+.searchIcon {
+    position: absolute;
+    left: 10px; 
+    color: gray;
+}
+
 
 #staffTable {
     width: 100%;
