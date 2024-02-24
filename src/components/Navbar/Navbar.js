@@ -19,7 +19,7 @@ function Navbar() {
             <FaIcons.FaBars className="bars" onClick={showSidebar} />
           </Link>
           <img src={img} alt="pict-logo" />
-          <div className="content">
+          <div className="navbar-content">
             <h2>PICT</h2>
             <p>Committies</p>
           </div>

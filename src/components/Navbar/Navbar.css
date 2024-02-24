@@ -13,7 +13,7 @@ img {
   padding-top:0.3rem;
 }
 
-.content {
+.navbar-content {
   margin-right: auto;
 }
 
@@ -31,14 +31,14 @@ img {
   background-color: #1973cc;
 }
 
-.content h2 {
+.navbar-content h2 {
   margin: 0;
 }
 
-.content p {
+.navbar-content p {
   color: #4169E1;
   margin: 0;
-  font-weight:500;
+  font-weight:600;
 }
 
 

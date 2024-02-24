@@ -1,9 +1,8 @@
 .academicYear {
-    margin-top: 0.3%;
     display: flex;
     align-items: center;
     justify-content: center; 
-    height: 3rem;
+    height: 3.1rem;
 }
 
 .ayLabel, .ayDropdown {

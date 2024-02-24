@@ -67,7 +67,7 @@ function CreateCommitteeForm() {
           <label>Upload document if any</label>
           <br />
           <div className="custom-file-input">
-            <input type="file" id="fileInput" className="input-hidden" />
+            <input type="file" id="fileInput" className="input-hidden" accept=".pdf"/>
             <label htmlFor="fileInput">
               <span>📁 Select File</span>
             </label>
