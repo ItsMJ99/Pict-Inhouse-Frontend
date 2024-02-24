@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: center; 
-    height: 2.5rem;
+    height: 3rem;
 }
 
 .ayLabel, .ayDropdown {
@@ -18,14 +18,16 @@
     font-weight: 500;
     font-size: 1.1rem;
     border-radius: 0 0.7rem 0.7rem 0;
-    padding: 0.7rem 1.5rem;
+    padding: 0.7rem 1.7rem;
+    height:100%;
 }
 
 .ayLabel {
     font-weight: 500;
     font-size: 1.1rem;
-    padding: 0.73rem 1.5rem;
+    padding: 0.7rem 1.5rem;
     border-radius: 0.7rem 0 0 0.7rem;
+    height:100%;
 }
 
 @media screen and (max-width: 768px) {
@@ -34,9 +36,3 @@
       margin-top: 0;
     }
   }
-
-@media screen and (min-width: 2000px) {
-    .academicYear{
-        margin-top: 0.25%;
-      }
-}
