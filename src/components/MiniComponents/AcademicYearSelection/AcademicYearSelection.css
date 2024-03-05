@@ -33,5 +33,17 @@
     .academicYear{
       margin: auto;
       margin-top: 0;
+      width: 100%;
+    }
+
+  }
+
+  @media screen and (max-width: 378px) {
+    .ayLabel, .ayDropdown{
+        font-size: 100%;
+    }
+
+    .academicYear{
+        width: 100%;
     }
   }

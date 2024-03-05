@@ -1,5 +1,4 @@
-.container{
-    margin-top: 2%;
+.committee-container{
     margin-left: 4%;
     margin-right:4%;  
     margin-bottom: 30px;
@@ -54,6 +53,10 @@
     width: 39%;
   }
   
+.deleteIcon{
+  margin-left:0;
+}
+
   #row1 input,
   #row2 input,#row3 textarea{
     padding-left: 1rem;
@@ -66,8 +69,8 @@
 
   #row1 input,
   #row2 input,
-  #row4 select,
-  #row5 select{
+  #row4 input,
+  #row5 input{
     height: 3rem;
     font-size: 18px;
     border: 2px solid;
@@ -76,7 +79,7 @@
     margin-top:1rem;
   }
 
-  #row4 select,#row5 select{
+  #row4 input,#row5 input{
     width: 100%;
   }
 
@@ -90,11 +93,11 @@
   margin-top:2rem;
 }
 
-#row4 select{
+#row4 input{
   width: 100%;
 }
 
-#row5 select{
+#row5 input{
   width: 85%;
 }
 
@@ -184,8 +187,6 @@
     background-color: #ff8686;
     width: 12%;
     height: 3rem;
-    padding-top: 0.2rem;
-    padding-bottom: 0.4rem;
     color: white;
     border: none;
     border-radius: 12px;
@@ -248,7 +249,7 @@
       margin-bottom:3%;
     }
 
-    .container{
+    .committee-container{
       margin-top: 4%;
     }
 
