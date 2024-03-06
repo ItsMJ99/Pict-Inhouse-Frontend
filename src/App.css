@@ -1,28 +1,22 @@
-.App {
-  text-align: center;
-}
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: 'Inter V';
+  src: url('./assets/Inter/static/Inter-SemiBold.ttf') format('truetype');
 }
 
-*{
-  font-family: inter v;
+body, input, button, select, textarea,label {
+  font-family: 'Inter V', sans-serif;
 }
 
 .headText{
+  font-family: 'Inter V', sans-serif;
   margin-top: 2rem;
-  margin-left: 4%;
-  margin-right:4%;  
   margin-bottom: 2rem;
-  color: rgba(0, 0, 0, 0.7);
+  margin-left: 4%;
 }
 
 .header-container {
@@ -33,68 +27,8 @@
   margin-right: 4%;
 }
 
-.committee-container{
-  margin-left: 4%;
-}
-
-.noCommittees {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 6rem;
-  padding: 2rem;
-}
-
-.noCommittees h1{
-  width: 40%;
-  margin-top: 2rem;
-  color: rgba(0, 0, 0, 0.8);
-  font-size: 3rem;
-  text-align: center;
-}
-
-.noCommittees h2{
-  text-align: center;
-  width: 45%;
-  margin-top: 2rem;
-  font-size: 2rem;
-  font-weight: 500;
-  color: rgba(0, 0, 0, 0.4);
-}
-
-.noCommittees button {
-  margin-top: 4rem;
-  color: white;
-  font-size: 22px;
-  height: 100%;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  background-color: rgba(30, 144, 255, 0.5);
-  padding: 1.4rem 5rem;
-}
-
-.noCommittees button:hover {
-  background-color: #1973cc;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@font-face {
-  font-family:inter v;
-  src: url(../public/Inter/static/Inter-Medium.ttf);
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body {
+  margin: 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -103,31 +37,6 @@
   }
 
   .header-container > * {
-    /* background-color: red; */
     margin-top: 2rem; 
-  }
-
-  .noCommittees {
-    margin-top: 2rem;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    padding: 1rem;
-  }
-
-  .noCommittees h1 {
-    width: 100%;
-    font-size: 2rem;
-  }
-
-  .noCommittees h2 {
-    width: 100%;
-    font-size: 1.5rem;
-  }
-
-  .noCommittees button {
-    padding: 1.3rem 2.5rem;
-    margin-bottom: 2rem;
   }
 }

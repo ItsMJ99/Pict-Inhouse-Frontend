@@ -1,10 +1,17 @@
 import React, { useState } from "react";
 import "./CreateCommitteeForm.css";
 import DeleteIcon from '@mui/icons-material/Delete';
+import FolderIcon from '@mui/icons-material/Folder';
 
 function CreateCommitteeForm() {
   const [rowCount, setRowCount] = useState([]);
   const [nextRowId, setNextRowId] = useState(1);
+  const [description, setDescription] = useState('');
+
+  const handleDescriptionChange = (event) => {
+    setDescription(event.target.value);
+  };
+  const crem=150-description.length;
 
   const addRowMain = (event) => {
     event.preventDefault();
@@ -25,14 +32,14 @@ function CreateCommitteeForm() {
             <br />
             <input
               type="text"
-              placeholder={"\u00A0\u00A0 Committee name"}
+              placeholder={"Committee name"}
             />
           </div>
           <div id="row2">
             <label id="catLab">Category</label>
             <input
               type="text"
-              placeholder={"\u00A0\u00A0 Academic Committee"}
+              placeholder={"Academic Committee"}
             />
           </div>
         </div>
@@ -40,7 +47,8 @@ function CreateCommitteeForm() {
         <div id="row3">
           <label>Description</label>
           <br />
-          <textarea></textarea>
+          <textarea maxlength="150" id="desc" onChange={handleDescriptionChange}></textarea>
+          <label>Characters Remaining : {crem}</label>
         </div>
 
         <div id="addRow">
@@ -50,9 +58,7 @@ function CreateCommitteeForm() {
         {rowCount.map(rowId => (
           <div className="rowMain" key={rowId}>
             <div id="row4">
-              <label>Name</label>
-              <br />
-              <input list={`nameList${rowId}`} />
+              <input list={`nameList${rowId}`} placeholder="Name"/>
               <datalist id={`nameList${rowId}`}>
                 <option value="John Wick" />
                 <option value="Ben Dover" />
@@ -61,9 +67,7 @@ function CreateCommitteeForm() {
             </div>
 
             <div id="row5">
-              <label>Designation</label>
-              <br />
-              <input list={`designationList${rowId}`} />
+              <input list={`designationList${rowId}`} placeholder="Designation"/>
               <datalist id={`designationList${rowId}`}>
                 <option value="Committee Head" />
                 <option value="Marketing" />
@@ -84,7 +88,7 @@ function CreateCommitteeForm() {
           <div className="custom-file-input">
             <input type="file" id="fileInput" className="input-hidden" accept=".pdf"/>
             <label htmlFor="fileInput">
-              <span>📁 Select File</span>
+              <span><FolderIcon className="FolderIcon"/> Select File</span>
             </label>
           </div>
         </div>

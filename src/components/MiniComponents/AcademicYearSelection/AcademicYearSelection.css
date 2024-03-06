@@ -13,6 +13,10 @@
     white-space: nowrap;
 }
 
+.ayDropdown option{
+    font-family: 'Inter V', sans-serif;
+}
+
 .ayDropdown {
     font-weight: 500;
     font-size: 1.1rem;
@@ -40,10 +44,6 @@
 
   @media screen and (max-width: 378px) {
     .ayLabel, .ayDropdown{
-        font-size: 100%;
-    }
-
-    .academicYear{
-        width: 100%;
+        padding: 0.7% 1.5%;
     }
   }

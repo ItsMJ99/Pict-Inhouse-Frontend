@@ -5,7 +5,7 @@ body {
 }
 
 .navbar-custom img {
-  width: 4rem;
+  width: 3.8rem;
   height: 4rem;
   margin-left: 4%;
 }
@@ -39,14 +39,14 @@ body {
   background-color: #1973cc;
 }
 
-.navbar-content h2 {
+.navbar-content h3 {
   font-family: 'Inter V', sans-serif;
   margin: 0;
 }
 
 .navbar-content p {
   font-family: 'Inter V', sans-serif;
-  color: #4169e1;
+  color: #1e90ff;
   margin: 0;
   font-weight: 600;
 }

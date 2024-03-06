@@ -1,9 +1,10 @@
-import logo from './logo.svg';
-import { BrowserRouter as Router,Route,Routes } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import logo from "./logo.svg";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Link } from "react-router-dom";
-import React, { useEffect } from 'react';
-import './App.css';
-import Header from "./components/Header/Header.jsx";
+import React, { useEffect } from "react";
+import "./App.css";
+import AddNewAcademicYear from "./components/AddNewAcademicYear/AddNewAcademicYear.jsx";
 import Navbar from "./components/Navbar/Navbar.js";
 import AddStaffDetails from "./components/AddStaffDetails/AddStaffDetails.jsx";
 import CreateCommitteeForm from "./components/CreateCommitteeForm/CreateCommitteeForm.jsx";
@@ -16,61 +17,59 @@ import Reports from "./components/Reports/Reports.js";
 function App() {
   return (
     <div>
-        <Router>
-          <Navbar />
-          <Routes>
+      <Router>
+        <Navbar />
+        <Routes>
 
-            <Route path="/home" Component={Home} />
+          <Route path="/home" Component={Home} />
 
-            <Route path="/reports" Component={Reports} />
+          <Route path="/reports" Component={Reports} />
 
-            <Route path="/addstaff" element={
-              <AddStaffDetails />
-            }/>
+          <Route path="/addstaff" element={<AddStaffDetails />} />
 
-            <Route path="/createcommittee" element={
+          <Route
+            path="/createcommittee"
+            element={
               <>
-              <div className="header-container">
-              <AcademicYearSelection />
-              </div>
-              <h2 className="headText">Create new committee</h2>
-              <CreateCommitteeForm />
-              </>
-            }/>
-
-            <Route path="/AddNewAcademicYear" element={
-              <div>
                 <div className="header-container">
                   <AcademicYearSelection />
-                  <Searchbar placeholder={"\u00A0\u00A0 Search Committees"} name={"New +"}/>       
                 </div>
-                  <div className='noCommittees'>
-                    <h1 >No committies added for academic year 2023-2024</h1>
-                    <h2>create one by click on new &gt; committee or by simply copying all the last year committee data</h2>
-                    <button>Copy last year committees</button>
-                  </div>
-              </div>
+                <h3 className="headText">Create new committee</h3>
+                <CreateCommitteeForm />
+              </>
+            }
+          />
 
-            }/>
+          <Route
+            path="/AddNewAcademicYear"
+            element={
+              <AddNewAcademicYear/>
+            }
+          />
 
-            <Route path="/editcommittee" element={
+          <Route
+            path="/editcommittee"
+            element={
               <>
                 <div className="header-container">
-                <AcademicYearSelection />
-                <Searchbar placeholder={"\u00A0\u00A0 Search Committees"} name={"New +"}/>
+                  <AcademicYearSelection />
+                  <Searchbar
+                    placeholder={"Search Committees"}
+                    name={"New +"}
+                    id="ec-searchBarBtn"
+                  />
                 </div>
                 <div className="committee-container">
-                <CommitteeSelector />
+                  <CommitteeSelector />
                 </div>
                 <CreateCommitteeForm />
               </>
-            }/>
-
-          </Routes>
-        </Router>
+            }
+          />
+        </Routes>
+      </Router>
     </div>
   );
 }
-
 
 export default App;

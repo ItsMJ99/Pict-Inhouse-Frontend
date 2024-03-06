@@ -10,6 +10,7 @@
     padding-left: 1rem;
     flex: 1; 
     height: 100%;
+    width: 100%;
     font-size: 18px;
     border: 2px solid;
     border-color: rgba(0, 0, 0, 0.3);
