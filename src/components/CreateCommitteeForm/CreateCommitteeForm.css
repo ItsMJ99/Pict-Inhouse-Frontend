@@ -3,13 +3,14 @@
 }
 
 .committee-container{
-    margin-left: 4%;
-    margin-right:4%;  
+    margin-left: 5%;
+    margin-right:5%;  
     margin-bottom: 30px;
 }
 
 .committeeForm label{
     font-weight: bold;
+    font-size: 16px;
 }
 
 .committeeForm{
@@ -28,21 +29,24 @@
     margin-right: 2rem;
   }
 
+  .rowMain{
+    margin-top: 0.5rem;
+  }
+
   #row1 {
-    width: 48%;
+    width: 49%;
     margin-right: 3%; 
   }
   
   #row2{
     flex-direction: 1;
-    width: 48%;
+    width: 49%;
   }
 
   #row3 textarea{
-    padding-left: 1rem;
-    padding-right: 1rem;
-    font-size:18px;
-    margin-top:1rem;
+    padding: 1rem;
+    font-size:14px;
+    margin-top:0.5rem;
     border:2px solid;
     border-color: rgba(0, 0, 0, 0.2);
     border-radius: 8px;
@@ -69,11 +73,7 @@
 
   #row1 input,
   #row2 input,#row3 textarea{
-    width: 99%;
-  }
-
-  #row3 textarea{
-    padding-top: 1rem;
+    width: 100%;
   }
 
   #row1 input,
@@ -81,12 +81,13 @@
   #row4 input,
   #row5 input{
     padding-left: 1rem;
+    padding-right: 1rem;
     height: 3rem;
-    font-size: 18px;
+    font-size: 14px;
     border: 2px solid;
     border-color: rgba(0, 0, 0, 0.2);
     border-radius: 8px;
-    margin-top:1rem;
+    margin-top:0.5rem;
   }
 
   #row4 input,#row5 input{
@@ -96,11 +97,11 @@
 #addRow,#row3,#row6,#row7,#row8,#row9{
     margin-left:2rem;
     margin-top:1rem;
-    margin-right: 2.3rem;
+    margin-right: 2rem;
 }
 
 #addRow{
-  margin-top:2rem;
+  margin-top:1.2rem;
 }
 
 #row4 input{
@@ -112,8 +113,6 @@
 }
 
 #row6 button{
-  margin-top:1rem;
-  margin-bottom:1rem;
   width: 100%;
   color: white;
   border: none;
@@ -132,12 +131,10 @@
   display: none;
 }
 
-#row8 {
-  margin-top: 1rem; 
-}
 
 #row8 label {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
+  font-size: 16px;
 }
 
 .custom-file-input {

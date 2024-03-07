@@ -34,7 +34,7 @@ function App() {
                 <div className="header-container">
                   <AcademicYearSelection />
                 </div>
-                <h3 className="headText">Create new committee</h3>
+                <h4 className="headText">Create new committee</h4>
                 <CreateCommitteeForm />
               </>
             }
