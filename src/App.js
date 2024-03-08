@@ -1,4 +1,4 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import logo from "./logo.svg";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Link } from "react-router-dom";
@@ -13,6 +13,7 @@ import AcademicYearSelection from "./components/MiniComponents/AcademicYearSelec
 import CommitteeSelector from "./components/MiniComponents/CommitteeSelector/CommitteeSelector.jsx";
 import Home from "./components/Home/Home.jsx";
 import Reports from "./components/Reports/Reports.js";
+import PublicView from "./components/PublicView/PublicView";
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-
+          <Route path="/" Component={PublicView} />
           <Route path="/home" Component={Home} />
 
           <Route path="/reports" Component={Reports} />
@@ -40,12 +41,7 @@ function App() {
             }
           />
 
-          <Route
-            path="/AddNewAcademicYear"
-            element={
-              <AddNewAcademicYear/>
-            }
-          />
+          <Route path="/AddNewAcademicYear" element={<AddNewAcademicYear />} />
 
           <Route
             path="/editcommittee"
