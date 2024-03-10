@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import "./CreateCommitteeForm.css";
+import { Form, Button } from "react-bootstrap";
 import DeleteIcon from '@mui/icons-material/Delete';
 import FolderIcon from '@mui/icons-material/Folder';
+import "./CreateCommitteeForm.css";
 
 function CreateCommitteeForm() {
   const [rowCount, setRowCount] = useState([]);
@@ -11,7 +12,7 @@ function CreateCommitteeForm() {
   const handleDescriptionChange = (event) => {
     setDescription(event.target.value);
   };
-  const crem=150-description.length;
+  const crem = 150 - description.length;
 
   const addRowMain = (event) => {
     event.preventDefault();
@@ -25,40 +26,32 @@ function CreateCommitteeForm() {
 
   return (
     <div className="committee-container">
-      <form className="committeeForm">
+      <Form className="committeeForm">
         <div className="rowMain1">
           <div id="row1">
-            <label id="comLab">Name of the committee</label>
-            <br />
-            <input
-              type="text"
-              placeholder={"Committee name"}
-            />
+            <Form.Label>Name of the committee</Form.Label>
+            <Form.Control type="text" placeholder="Committee name" />
           </div>
           <div id="row2">
-            <label id="catLab">Category</label>
-            <input
-              type="text"
-              placeholder={"Academic Committee"}
-            />
+            <Form.Label>Category</Form.Label>
+            <Form.Control type="text" placeholder="Academic Committee" />
           </div>
         </div>
 
         <div id="row3">
-          <label>Description</label>
-          <br />
-          <textarea maxlength="150" id="desc" onChange={handleDescriptionChange}></textarea>
-          <label>Characters Remaining : {crem}</label>
+          <Form.Label>Description</Form.Label>
+          <Form.Control as="textarea" maxLength="150" id="desc" onChange={handleDescriptionChange} />
+          <Form.Text>Characters Remaining : {crem}</Form.Text>
         </div>
 
         <div id="addRow">
-          <label id="memLab">Members</label>
+          <Form.Label>Members</Form.Label>
         </div>
 
         {rowCount.map(rowId => (
           <div className="rowMain" key={rowId}>
             <div id="row4">
-              <input list={`nameList${rowId}`} placeholder="Name"/>
+              <Form.Control list={`nameList${rowId}`} placeholder="Name" />
               <datalist id={`nameList${rowId}`}>
                 <option value="John Wick" />
                 <option value="Ben Dover" />
@@ -67,40 +60,37 @@ function CreateCommitteeForm() {
             </div>
 
             <div id="row5">
-              <input list={`designationList${rowId}`} placeholder="Designation"/>
+              <Form.Control list={`designationList${rowId}`} placeholder="Designation" />
               <datalist id={`designationList${rowId}`}>
                 <option value="Committee Head" />
                 <option value="Marketing" />
                 <option value="Finance" />
               </datalist>
-              <button className="delStaffRowBtn" onClick={() => deleteRowMain(rowId)}><DeleteIcon className="deleteIcon" sx={{ fontSize: 24 }}/></button>
+              <Button variant="danger" className="delStaffRowBtn" onClick={() => deleteRowMain(rowId)}><DeleteIcon /></Button>
             </div>
           </div>
         ))}
 
         <div id="row6">
-          <button onClick={addRowMain}>New Member</button>
+          <Button onClick={addRowMain}>New Member</Button>
         </div>
 
         <div id="row8">
-          <label>Upload document if any</label>
-          <br />
+          <Form.Label>Upload document if any</Form.Label>
           <div className="custom-file-input">
-            <input type="file" id="fileInput" className="input-hidden" accept=".pdf"/>
-            <label htmlFor="fileInput">
-              <span><FolderIcon className="FolderIcon"/> Select File</span>
-            </label>
+            <Form.Control type="file" id="fileInput" className="input-hidden" accept=".pdf" />
+            <Form.Label htmlFor="fileInput">
+              <span><FolderIcon className="FolderIcon" sx={{ fontSize: 20 }} /> Select File</span>
+            </Form.Label>
           </div>
         </div>
 
         <div id="row9">
-          <button type="reset" id="btnReset">
-            Reset
-          </button>
-          <button id="btnCancel">Cancel</button>
-          <button id="btnSave">Save</button>
+          <Button type="reset" id="btnReset">Reset</Button>
+          <Button id="btnCancel">Cancel</Button>
+          <Button id="btnSave">Save</Button>
         </div>
-      </form>
+      </Form>
     </div>
   );
 }
