@@ -5,14 +5,14 @@ body {
 }
 
 .navbar-custom img {
-  width: 3.8rem;
-  height: 4rem;
+  width: 3.3rem;
+  height: 3.5rem;
   margin-left: 4%;
 }
 
 
 .navbar-custom{
-  height: 80px;
+  height: 70px;
   display: flex;
   align-items: center;
   box-shadow: 0px 2px 4px rgba(5, 0, 0, 0.1);
@@ -31,7 +31,7 @@ body {
   background-color: #1e90ff;
   border: none;
   border-radius: 5px;
-  padding: 0.5rem 2.5rem;
+  padding: 0.3rem 1.5rem;
   margin-right: 4%;
 }
 
@@ -39,7 +39,7 @@ body {
   background-color: #1973cc;
 }
 
-.navbar-content h3 {
+.navbar-content h4 {
   font-family: 'Inter V', sans-serif;
   margin: 0;
 }
@@ -136,3 +136,18 @@ span {
   }
 }
 
+@media screen and (min-width: 2559px){
+  .navbar-custom{
+    height: 80px;
+  }
+
+  .navbar-custom img {
+    width: 3.8rem;
+    height: 4rem;
+  }
+
+  .logoutBtn {
+    font-size: 18px;
+    padding: 0.5rem 2rem;
+  }
+}

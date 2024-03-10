@@ -42,3 +42,13 @@ body, option, button, select {
         padding: 0.8rem 1.8rem;
     }
 }
+
+@media screen and (min-width: 2560px) {
+    #committeeSelector{
+      height: 3rem;
+    }
+
+    #committeeSelector{
+        
+    }
+  }

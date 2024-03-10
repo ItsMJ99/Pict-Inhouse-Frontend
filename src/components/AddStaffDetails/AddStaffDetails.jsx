@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import StaffInfoRow from "../MiniComponents/StaffInfoRow/StaffInfoRow.jsx";
 import StaffInfo from "../MiniComponents/StaffInfoRow/StaffInfo.js";
-import { BiSearch } from 'react-icons/bi'; // Import the Search icon from react-icons/bi
-import { BsUpload } from 'react-icons/bs'; // Import the Upload icon from react-icons/bs
+import { BiSearch } from 'react-icons/bi'; 
+import { BsUpload } from 'react-icons/bs'
 import "./AddStaffDetails.css";
-import $ from 'jquery';
-
 
 function StaffDetails() {
     const [showAddFaculty, setShowAddFaculty] = useState(false);
@@ -37,7 +35,7 @@ function StaffDetails() {
             <div className={`addFaculty ${showAddFaculty ? 'open' : ''}`}>
                 <div className="facultyImageAdd">
                     <input type="file" id="fileInput" className="input-hidden" accept=".png, .jpg, .jpeg"/>
-                    <label htmlFor="fileInput" className="d-flex align-items-center">
+                    <label htmlFor="fileInput" className="d-flex align-items-center btn btn-light">
                         <span className="uploadIconContainer">Image<BsUpload className="ms-1" /></span>
                     </label>
                 </div>

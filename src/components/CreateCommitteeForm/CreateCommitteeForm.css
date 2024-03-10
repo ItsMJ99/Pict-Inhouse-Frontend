@@ -280,4 +280,55 @@
     }
   }
 
+  @media screen and (min-width: 2560px) {
+
+    .rowMain1{
+      margin-top: 2rem;
+    }
+
+    #row1 input,
+    #row2 input,
+    #row4 input,
+    #row5 input{
+      height: 3.5rem;
+      font-size: 18px;
+      margin-top: 0.5rem;
+    }
+  
+    #row3 textarea{
+      height: 5rem;
+      font-size: 18px;
+      margin-top: 0.5rem;
+    }
+
+    #row9{
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    #btnSave,
+    #btnCancel,
+    #btnReset{
+      font-size: 20px;
+    }
+
+  .characters-remaining {
+    font-size: 20px; 
+  }
+
+  #row8 label{
+    font-size: 18px;
+  }
+
+  #row8 .Upload-Doc{
+    font-size: 20px;
+  }
+
+    .committeeForm label{
+      margin-top: 1rem;
+      font-size: 20px;
+    }
+  }
+  
+
 

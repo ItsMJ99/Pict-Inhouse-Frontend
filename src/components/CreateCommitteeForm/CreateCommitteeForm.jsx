@@ -4,6 +4,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import FolderIcon from '@mui/icons-material/Folder';
 import "./CreateCommitteeForm.css";
 
+
 function CreateCommitteeForm() {
   const [rowCount, setRowCount] = useState([]);
   const [nextRowId, setNextRowId] = useState(1);
@@ -41,7 +42,7 @@ function CreateCommitteeForm() {
         <div id="row3">
           <Form.Label>Description</Form.Label>
           <Form.Control as="textarea" maxLength="150" id="desc" onChange={handleDescriptionChange} />
-          <Form.Text>Characters Remaining : {crem}</Form.Text>
+          <Form.Text className="characters-remaining">Characters Remaining : {crem}</Form.Text>
         </div>
 
         <div id="addRow">
@@ -76,7 +77,7 @@ function CreateCommitteeForm() {
         </div>
 
         <div id="row8">
-          <Form.Label>Upload document if any</Form.Label>
+          <Form.Label className="Upload-Doc">Upload document if any</Form.Label>
           <div className="custom-file-input">
             <Form.Control type="file" id="fileInput" className="input-hidden" accept=".pdf" />
             <Form.Label htmlFor="fileInput">

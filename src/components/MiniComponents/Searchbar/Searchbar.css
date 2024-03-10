@@ -44,3 +44,13 @@
       margin-left: 0;
     }
   }
+
+  @media screen and (min-width: 2560px) {
+    #searchbar-btn{
+      height: 3rem;
+    }
+
+    #searchbar-btn input{
+      font-size: 20px;
+    }
+  }

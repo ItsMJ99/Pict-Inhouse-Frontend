@@ -11,7 +11,12 @@
     border-color: rgba(0, 0, 0, 0.2);
     background-color: white;
     white-space: nowrap;
+    height: 100%;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
 }
+
 
 .ayDropdown option{
     font-family: 'Inter V', sans-serif;
@@ -22,7 +27,6 @@
     border-radius: 0 0.7rem 0.7rem 0;
     padding: 0.5rem 1rem;
     height: 100%;
-    line-height: 1rem; 
 }
 
 
@@ -31,15 +35,14 @@
     padding: 0.7rem 1rem;
     border-radius: 0.5rem 0 0 0.7rem;
     height:100%;
-    line-height: 1rem; 
 }
 
-@media screen and (max-width: 651px) {
+@media screen and (min-width: 2560px) {
     .academicYear{
-      margin: auto;
-      margin-top: 0;
-
+        height: 3rem;
     }
 
-  }
-
+    .ayLabel, .ayDropdown {
+        font-size: 18px;
+    }
+}
