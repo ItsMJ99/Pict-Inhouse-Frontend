@@ -205,9 +205,7 @@ function MemberComponent(props) {
         <UserImage />
       </div>
       <div className="member-details justify-content-center align-items-center m-sm-0 mt-2">
-        <p className="member-name p-0 m-0 h6 fw-semibold fs-6 ">
-          Mitali Jayale
-        </p>
+        <p className="member-name p-0 m-0 h6 fw-semibold fs-6 ">Jhon Doeeee</p>
         <p className="member-designation p-0 m-0 fw-">Principal</p>
       </div>
     </div>
