@@ -31,7 +31,7 @@ function App() {
       setScreenSize(size);
     };
 
-    handleResize(); // Call it initially
+    handleResize(); 
     window.addEventListener("resize", handleResize);
 
     return () => {
@@ -71,7 +71,18 @@ function App() {
             }
           />
 
-          <Route path="/AddNewAcademicYear" element={<AddNewAcademicYear />} />
+          <Route path="/AddNewAcademicYear" element={
+            <>
+              <div className="header-container">
+                  <AcademicYearSelection />
+                  <Searchbar
+                  placeholder={"Search Committees"}
+                  name={"New +"}
+                  />
+              </div>
+              <AddNewAcademicYear />
+            </>
+          } />
 
           <Route
             path="/editcommittee"
@@ -82,7 +93,6 @@ function App() {
                   <Searchbar
                     placeholder={"Search Committees"}
                     name={"New +"}
-                    id="ec-searchBarBtn"
                   />
                 </div>
                 <div className="committee-container">

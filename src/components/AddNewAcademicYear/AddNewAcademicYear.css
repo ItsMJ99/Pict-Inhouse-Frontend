@@ -1,51 +1,48 @@
-.container{
-    margin:0;
-    margin-left:2rem;
-    margin-right:2rem;
-    flex-direction: row;
+h1,h3,button{
+  font-family: 'Inter V', sans-serif;
 }
 
 .top-row {
-    margin-top: 3rem;
+    margin-top: 3%;
   }
   
   .AcademicYearSelection,
   .Searchbar {
-    width: calc(50% - 1rem); /* Adjust margin of the container */
+    width: calc(50% - 1rem);
   }
 
-.noCommittees {
+  .noCommittees {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 5rem;
+    margin-top: 3rem;
     padding: 2rem;
-  }
-  
-  .noCommittees h3 {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
+}
+
+.noCommittees h3 {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
   
   .noCommittees h3 {
     color: rgba(0, 0, 0, 0.4);
   }
   
   .noCommittees button {
-    margin-top: 2rem;
+    margin-top: 1rem;
     color: white;
-    font-size: 1.3rem;
+    font-size: 20px;
     border: none;
     border-radius: 12px;
     cursor: pointer;
+    padding: 1rem 2rem; 
     background-color: #8EBCE8;
-    padding: 1rem 3.5rem;
-  }
-  
-  .noCommittees button:hover {
+}
+
+.noCommittees button:hover {
     background-color: #1973cc;
-  }
+}
   
   @media screen and (max-width: 768px) {
     .top-row {
@@ -65,10 +62,13 @@
       text-align: center;
       padding: 1rem;
     }
+
+    
   
     .noCommittees button {
-      padding: 1.3rem 2.5rem;
+      font-size: 16px;
       margin-bottom: 2rem;
-    }
   }
+  }
+  
   

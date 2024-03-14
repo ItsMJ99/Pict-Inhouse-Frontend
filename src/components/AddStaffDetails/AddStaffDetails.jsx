@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import StaffInfoRow from "../MiniComponents/StaffInfoRow/StaffInfoRow.jsx";
 import StaffInfo from "../MiniComponents/StaffInfoRow/StaffInfo.js";
-import { BiSearch } from 'react-icons/bi'; 
-import { BsUpload } from 'react-icons/bs'
+import SearchIcon from '@mui/icons-material/Search';
+import UploadIcon from '@mui/icons-material/Upload';
 import "./AddStaffDetails.css";
 
 function StaffDetails() {
@@ -13,41 +13,37 @@ function StaffDetails() {
     };
 
     return (
-        <div className="addstaff-container">
-            <div className="row mb-3">
-                <div className="col">
-                    <div className="d-flex align-items-center">
-                        <div className="blank-bar bg-primary rounded" />
-                        <h1 className="ms-3 mb-0">Staff Details</h1>
-                    </div>
+        <div className="container">
+            <div className="staff-title">
+                <div className="blank-bar" />
+                <h3>Staff Details</h3>
+            </div>
+            <div id="searchStaffRow">
+                <div className="searchStaff">
+                    <input type="text" placeholder="Search Staff" />
+                    <SearchIcon className="searchIcon" />
                 </div>
-                <div className="col-auto">
-                    <div className="d-flex align-items-center">
-                        <div className="searchStaff position-relative me-3">
-                            <input type="text" placeholder="Search Staff" className="form-control" />
-                            <BiSearch className="searchIcon position-absolute top-50 start-0 translate-middle-y" />
-                        </div>
-                        <button className="addStaffBtn btn btn-primary" onClick={toggleAddFaculty}>New Staff +</button>
-                    </div>
-                </div>
+                <button className="addStaffBtn" onClick={toggleAddFaculty}>New Staff +</button>
             </div>
 
             <div className={`addFaculty ${showAddFaculty ? 'open' : ''}`}>
                 <div className="facultyImageAdd">
                     <input type="file" id="fileInput" className="input-hidden" accept=".png, .jpg, .jpeg"/>
-                    <label htmlFor="fileInput" className="d-flex align-items-center btn btn-light">
-                        <span className="uploadIconContainer">Image<BsUpload className="ms-1" /></span>
+                    <label htmlFor="fileInput">
+                    <span className="uploadIconContainer">            
+                        Image<UploadIcon id="uploadImgIcon" sx={{ fontSize: 20 }} />
+                    </span>
                     </label>
                 </div>
-                <input type="text" className="form-control facultyNameAdd" placeholder="Enter faculty name" />
-                <input type="text" className="form-control facultyEducationAdd" placeholder="Enter faculty education / caption" />
-                <input type="text" className="form-control facultySocialAdd" placeholder="social link" />
-                <button className="saveAddBtn btn btn-success" onClick={toggleAddFaculty}>Save</button>
-                <button className="cancelAddBtn btn btn-danger" onClick={toggleAddFaculty}>Cancel</button>
+                <input type="text" className="facultyNameAdd" placeholder="Enter faculty name" />
+                <input type="text" className="facultyEducationAdd" placeholder="Enter faculty education / caption" />
+                <input type="text" className="facultySocialAdd" placeholder="social link" />
+                <button className="saveAddBtn" onClick={toggleAddFaculty}>Save</button>
+                <button className="cancelAddBtn" onClick={toggleAddFaculty}>Cancel</button>
             </div>
 
             {StaffInfo.length > 0 ? (
-                <table id="staffTable" className="table">
+                <table id="staffTable">
                     <thead>
                         <tr className="columnHeading">
                             <th></th>
@@ -71,7 +67,7 @@ function StaffDetails() {
                     </tbody>
                 </table>
             ) : (
-                <div className="noRecordMessage text-center">No Record Found !!!</div>
+                <div className="noRecordMessage">No Record Found !!!</div>
             )}
         </div>
     );
