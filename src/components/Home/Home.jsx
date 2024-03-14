@@ -3,6 +3,16 @@ import * as FaIcons from "react-icons/fa";
 import "./Home.css";
 import Carts from "../Navbar/Carts";
 
+const Committiees = [
+  {id: "1",name:"Elevate",members:50,head:"Mr. XYZ",status:"Completed"},
+  {id: "2",name:"Coding Chapter",members:30,head:"Mr. S. S. Pande",status:"Completed"},
+  {id: "3",name:"PDA",members:45,head:"Mr. S. S. Pande",status:"Completed"},
+  {id: "4",name:"IEEE",members:67,head:"Mr. ABC",status:"Incomplete"}, 
+  {id: "5",name:"INC",members:30,head:"Mr. S. S. Deshmukh",status:"Completed"},
+  {id: "6",name:"PCSB",members:70,head:"Mrs. B.P",status:"Completed"},
+  {id: "7",name:"Pictoreal",members:56,head:"Mrs. A.B.J",status:"Incomplete"},
+];
+
 function Dashboard() {
   return (
     <>
@@ -82,55 +92,30 @@ function Dashboard() {
         </div>
 
         <div className="tabular--wrapper">
-          <h3 className="main--title">Commietties</h3>
+          <h3 className="main--title">Committees</h3>
           <div className="table--container">
             <table>
               <thead>
                 <tr>
-                  <th>Committe Name</th>
+                  <th>Committee Name</th>
                   <th>Total Members</th>
-                  <th>Head of Committe</th>
+                  <th>Head of Committee</th>
                   <th>Status</th>
                   <th>Action</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>PDA</td>
-                  <td>30</td>
-                  <td>Mr. S. S. Pande</td>
-                  <td>Pending</td>
+                {Committiees.map(com=>(
+                  <tr>
+                  <td>{com.name}</td>
+                  <td>{com.members}</td>
+                  <td>{com.head}</td>
+                  <td>{com.status}</td>
                   <td>
                     <button>Edit</button>
                   </td>
                 </tr>
-                <tr>
-                  <td>PDA</td>
-                  <td>30</td>
-                  <td>Mr. S. S. Pande</td>
-                  <td>Pending</td>
-                  <td>
-                    <button>Edit</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>PDA</td>
-                  <td>30</td>
-                  <td>Mr. S. S. Pande</td>
-                  <td>Completed</td>
-                  <td>
-                    <button>Edit</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>PDA</td>
-                  <td>30</td>
-                  <td>Mr. S. S. Pande</td>
-                  <td>Completed</td>
-                  <td>
-                    <button>Edit</button>
-                  </td>
-                </tr>
+                ))}
               </tbody>
               <tfoot>
                 <tr>

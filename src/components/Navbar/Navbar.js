@@ -20,7 +20,7 @@ function Navbar() {
         <img src={img} alt="pict-logo" />
         <div className="navbar-content">
           <h4>PICT</h4>
-          <p>Committies</p>
+          <p>Committiees</p>
         </div>
         <button className="logoutBtn">Logout</button>
       </div>

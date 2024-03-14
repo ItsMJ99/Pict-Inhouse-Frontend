@@ -88,7 +88,7 @@
     padding-left: 1rem;
     padding-right: 1rem;
     height: 2.5rem;
-    font-size: 14px; /* Increased font size */
+    font-size: 14px; 
     border: 2px solid;
     border-color: rgba(0, 0, 0, 0.2);
     border-radius: 8px;
@@ -178,6 +178,13 @@
     display: flex;
     justify-content: flex-end;
     width:calc(100% - 4rem);
+}
+
+#row9 p {
+  font-size: 18px;
+  margin-right: auto; 
+  font-family: 'Inter V', sans-serif;
+  color: rgba(0,0,0,0.4);
 }
 
 #row9 button {

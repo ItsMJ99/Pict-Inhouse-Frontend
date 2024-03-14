@@ -31,7 +31,7 @@ function App() {
       setScreenSize(size);
     };
 
-    handleResize(); 
+    handleResize();
     window.addEventListener("resize", handleResize);
 
     return () => {
@@ -51,6 +51,19 @@ function App() {
           <Route path="/addstaff" element={<AddStaffDetails />} />
 
           <Route
+            path="/AddNewAcademicYear"
+            element={
+              <>
+                <div className="header-container">
+                  <AcademicYearSelection />
+                  <Searchbar placeholder={"Search Committees"} name={"New +"} />
+                </div>
+                <AddNewAcademicYear />
+              </>
+            }
+          />
+
+          <Route
             path="/createcommittee"
             element={
               <>
@@ -66,23 +79,10 @@ function App() {
                 {screenSize === "medium" && (
                   <h4 className="headText">Create new committee</h4>
                 )}
-                <CreateCommitteeForm />
+                <CreateCommitteeForm showLastUpdated={false} />
               </>
             }
           />
-
-          <Route path="/AddNewAcademicYear" element={
-            <>
-              <div className="header-container">
-                  <AcademicYearSelection />
-                  <Searchbar
-                  placeholder={"Search Committees"}
-                  name={"New +"}
-                  />
-              </div>
-              <AddNewAcademicYear />
-            </>
-          } />
 
           <Route
             path="/editcommittee"
@@ -90,15 +90,12 @@ function App() {
               <>
                 <div className="header-container">
                   <AcademicYearSelection />
-                  <Searchbar
-                    placeholder={"Search Committees"}
-                    name={"New +"}
-                  />
+                  <Searchbar placeholder={"Search Committees"} name={"New +"} />
                 </div>
                 <div className="committee-container">
-                  <CommitteeSelector />
+                  <CommitteeSelector/>
                 </div>
-                <CreateCommitteeForm />
+                <CreateCommitteeForm showLastUpdated={true} />
               </>
             }
           />
