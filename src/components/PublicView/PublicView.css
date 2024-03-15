@@ -13,3 +13,8 @@
 p {
   font-size: 14px;
 }
+
+.member {
+  display: flex;
+  align-items: center;
+}

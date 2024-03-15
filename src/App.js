@@ -2,7 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import logo from "./logo.svg";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Link } from "react-router-dom";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import AddNewAcademicYear from "./components/AddNewAcademicYear/AddNewAcademicYear.jsx";
 import Navbar from "./components/Navbar/Navbar.js";
@@ -16,17 +16,57 @@ import Reports from "./components/Reports/Reports.js";
 import PublicView from "./components/PublicView/PublicView";
 
 function App() {
+  const [screenSize, setScreenSize] = useState("");
+
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      let size = "";
+      if (width >= 2560) {
+        size = "large";
+      } else if (width <= 1920) {
+        size = "small";
+      } else {
+        size = "medium";
+      }
+      setScreenSize(size);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div>
       <Router>
         <Navbar />
         <Routes>
+<<<<<<< HEAD
           <Route path="/" Component={PublicView} />
+=======
+>>>>>>> a75036eeba03815bc78db1032131f22620ae3616
           <Route path="/home" Component={Home} />
 
           <Route path="/reports" Component={Reports} />
 
           <Route path="/addstaff" element={<AddStaffDetails />} />
+
+          <Route
+            path="/AddNewAcademicYear"
+            element={
+              <>
+                <div className="header-container">
+                  <AcademicYearSelection />
+                  <Searchbar placeholder={"Search Committees"} name={"New +"} />
+                </div>
+                <AddNewAcademicYear />
+              </>
+            }
+          />
 
           <Route
             path="/createcommittee"
@@ -35,30 +75,37 @@ function App() {
                 <div className="header-container">
                   <AcademicYearSelection />
                 </div>
-                <h4 className="headText">Create new committee</h4>
-                <CreateCommitteeForm />
+                {screenSize === "large" && (
+                  <h3 className="headText">Create new committee</h3>
+                )}
+                {screenSize === "small" && (
+                  <h5 className="headText">Create new committee</h5>
+                )}
+                {screenSize === "medium" && (
+                  <h4 className="headText">Create new committee</h4>
+                )}
+                <CreateCommitteeForm showLastUpdated={false} />
               </>
             }
           />
 
+<<<<<<< HEAD
           <Route path="/AddNewAcademicYear" element={<AddNewAcademicYear />} />
 
+=======
+>>>>>>> a75036eeba03815bc78db1032131f22620ae3616
           <Route
             path="/editcommittee"
             element={
               <>
                 <div className="header-container">
                   <AcademicYearSelection />
-                  <Searchbar
-                    placeholder={"Search Committees"}
-                    name={"New +"}
-                    id="ec-searchBarBtn"
-                  />
+                  <Searchbar placeholder={"Search Committees"} name={"New +"} />
                 </div>
                 <div className="committee-container">
-                  <CommitteeSelector />
+                  <CommitteeSelector/>
                 </div>
-                <CreateCommitteeForm />
+                <CreateCommitteeForm showLastUpdated={true} />
               </>
             }
           />

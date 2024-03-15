@@ -14,7 +14,7 @@ body, input, button, select, textarea,label {
 
 .headText{
   font-family: 'Inter V', sans-serif;
-  margin-top: 2%;
+  margin-top: 1.5%;
   margin-bottom: 1.5%;
   margin-left: 5%;
 }
@@ -22,7 +22,7 @@ body, input, button, select, textarea,label {
 .header-container {
   display: flex;
   flex-wrap: wrap; 
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-left: 5%;
   margin-right: 5%;
 }
@@ -32,11 +32,22 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  .headText{
+  .headText {
     text-align: center;
+    margin: 0;
+    margin-top: 1rem;
   }
 
   .header-container > * {
-    margin-top: 2rem; 
+    margin-top: 2rem;
+    margin: auto;
   }
+}
+
+
+@media screen and (min-width: 2560px) {
+  .header-container{
+    margin-top: 2rem;
+  }
+
 }
